@@ -60,7 +60,7 @@
     </ul>
      
     </div>
-    <a class="btn btn-warning" href="Logout" >Cerrar Sesion</a>
+    <a class="btn btn-warning" href="Logout" >Cerrar Sesion Actual</a>
     
     
 </nav>
