@@ -41,24 +41,24 @@
                 Consultar
             </a>
         <div class="dropdown-menu">
-                <a class="dropdown-item" href="ver.jsp">Instructor</a>
+                <a class="dropdown-item" href="VerInstructor.jsp">Instructor</a>
                
             </div>
         </li>
       
-      
+ 
         
       <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                 Registrar
             </a>
         <div class="dropdown-menu">
-                <a class="dropdown-item" href="Reg.jsp">Instructor</a>
+                <a class="dropdown-item" href="RegInstructor.jsp">Instructor</a>
                
             </div>
         </li>
     </ul>
-   
+     
     </div>
     <a class="btn btn-warning" href="Logout" >Cerrar Sesion</a>
     
