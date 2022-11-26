@@ -4,6 +4,11 @@
     Author     : Wally Ramirez
 --%>
 
+
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,6 +26,33 @@
         
     </head>
     <body>
+        
+        
+        
+        <%
+            //conectando a base de datos
+            Connection conexion=null;
+            String url="jdbc:mysql://localhost:3306/recu_2022";//url de MySQL
+            String usuario="root";// usuario de mysql local
+            String clave="1234"; 
+           
+            
+             Class.forName("com.mysql.jdbc.Driver");
+             conexion=DriverManager.getConnection( url, usuario,clave);
+             
+             //listado de la tabla
+             
+             PreparedStatement ps;
+             ResultSet rs;
+             ps=conexion.prepareStatement("select * from usuario");
+             rs=ps.executeQuery();
+             
+             //creacion de tabla
+             
+
+            %>
+        
+        
      
   <div class="container-sm ">              
       <div class="shadow-lg p-3 bg-white rounded">
@@ -126,6 +158,25 @@
         </div>
         
         
-        
+              <%
+                        
+                        while(rs.next()){
+
+                    %>
+             
+                    
+                    
+                    <tr>
+                    <td><%= rs.getString("usuario")%></td>
+                     <td class="text-center"> 
+                                                
+                        
+                           
+                        </td>
+                    
+                    </tr>
+                    
+                     <% } %>
+                    
     </body>
 </html>
